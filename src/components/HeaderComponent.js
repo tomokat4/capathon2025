@@ -1,49 +1,38 @@
 import React from "react";
-import { Link } from "react-router";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
+import { Navbar, Nav, Container, Form, NavDropdown } from "react-bootstrap";
 
 const HeaderComponent = (props) => {
-  const headerClass = props.showDarkMode ? "bg-dark text-light" : "bg-light";
+  const headerClass = props.showDarkMode ? "bg-dark navbar-dark" : "bg-light navbar-light";
 
   return (
-    <Container fluid className={headerClass}>
+    <Navbar expand="lg" className={headerClass}>
       <Container>
-        <Row>
-          <Col>
-            <Nav defaultActiveKey="/Homepage">
-              <Nav.Item>
-                <Nav.Link as={Link} to="/Homepage">
-                  Hjemmeside
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/Kalender">
-                  Kalender
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/Om">
-                  Info
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col className="d-flex justify-content-end align-items-center">
-            <Form.Check
-              type="switch"
-              id="custom-switch"
-              onChange={props.toggleDarkMode}
-              checked={props.showDarkMode}
-              label="Dark Mode"
-            />
-          </Col>
-        </Row>
+        <Navbar.Brand as={Link} to="/Homepage">Min Nettside</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/Homepage">Hjem</Nav.Link>
+            <Nav.Link as={Link} to="/Kalender">Kalender</Nav.Link>
+            <Nav.Link as={Link} to="/Om">Om Oss</Nav.Link>
+            {/* Optional Dropdown */}
+            <NavDropdown title="Tjenester" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something else</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form.Check 
+            type="switch" 
+            id="dark-mode-switch" 
+            onChange={props.toggleDarkMode} 
+            checked={props.showDarkMode} 
+            label="Mørk Modus" 
+            className="text-light" 
+          />
+        </Navbar.Collapse>
       </Container>
-    </Container>
+    </Navbar>
   );
 };
 
