@@ -19,7 +19,7 @@ function App() {
         {/* Navbar */}
         <Navbar expand="lg" className={showDarkMode ? "bg-dark navbar-dark" : "bg-light navbar-light shadow-sm"}>
           <Container>
-            <Navbar.Brand as={Link} to="/Homepage">Min Nettside</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/Homepage">Aktivio</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">

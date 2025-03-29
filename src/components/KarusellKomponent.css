@@ -1,0 +1,37 @@
+.custom-carousel {
+    position: relative;
+  }
+  
+  .carousel-image {
+    object-fit: cover;
+    height: 600px; /* Adjust height for better display */
+  }
+  
+  .carousel-caption-custom {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+  }
+  
+  .caption-background {
+    display: inline-block;
+    background: rgba(128, 128, 128, 0.7); /* Semi-transparent gray */
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .caption-background h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .caption-background p {
+    font-size: 18px;
+    margin: 0;
+  }
+  

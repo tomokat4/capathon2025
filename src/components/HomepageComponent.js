@@ -1,16 +1,13 @@
+// HomepageComponent.js
 import React from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import KarusellComponent from "./KarusellComponent"; // Adjust the import path
 
 const HomepageComponent = () => {
   return (
     <Container className="py-5 text-center">
-      <h1 className="display-3 font-weight-bold mb-4">Velkommen til Hjemmesiden</h1>
-      <p className="lead text-muted mb-4">Her finner du informasjon om våre tjenester og kommende arrangementer.</p>
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <Button variant="primary" size="lg" href="/Kalender">Se Kalender</Button>
-        </Col>
-      </Row>
+      {/* Add the controlled carousel here */}
+      <KarusellComponent />
     </Container>
   );
 };

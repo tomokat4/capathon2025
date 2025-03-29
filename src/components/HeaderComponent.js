@@ -8,7 +8,7 @@ const HeaderComponent = (props) => {
   return (
     <Navbar expand="lg" className={headerClass}>
       <Container>
-        <Navbar.Brand as={Link} to="/Homepage">Min Nettside</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/Homepage">Aktivio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
